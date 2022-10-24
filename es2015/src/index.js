@@ -6,6 +6,19 @@ function carre(element){
    return element*element 
 }
 let t2 = t.map(carre);
+
+function map(t, funcCallback){
+    let tabResultat = [];
+    for (let index = 0; index<t.length; index++){
+        const element = t[index];
+        tabResultat.push(funcCallback(element, index))
+    }
+    return tabResultat;
+}
+
+let t6 = map(t ,carre);
+
+
 // let t3 = t.map(carre()) iil faut passer la 
  console.log("la valeur de")
 console.log(t2);
@@ -31,3 +44,35 @@ let t5 = t.reduce(function(preValue, currValue){
 }, 0)
 
 console.log("t5 " + t5);
+
+function formatterNom(nom, prenom){
+    return nom+" "+prenom;
+}
+
+let formatterNomV2 = (nom, prenom)=>{
+    return nom+" "+prenom;
+}
+
+let formatterNomV3 = (nom, prenom)=>{
+    return nom+" "+prenom;
+}
+
+function validerNom(nom){
+    nom = nom.trim();
+    if (nom.length==1){
+        return true
+    }
+    return false;
+}
+let validerNomV2 = (nom)=>{
+    nom = nom.trim();
+    if (nom.length==1){
+        return true
+    }
+    return false;
+}
+
+function getSautLigneHTML(){
+    return "<br>"
+}
+let getSautLigneHTMLV2=()=>"<br>";
