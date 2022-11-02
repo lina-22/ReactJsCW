@@ -75,4 +75,7 @@ let validerNomV2 = (nom)=>{
 function getSautLigneHTML(){
     return "<br>"
 }
+function getSautLigneHTML(){
+    return "hello"
+}
 let getSautLigneHTMLV2=()=>"<br>";
